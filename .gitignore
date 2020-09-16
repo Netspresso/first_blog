@@ -1,0 +1,5 @@
+*.idea
+*.vs
+*pyc
+my_media
+*.whl
