@@ -43,7 +43,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,10 +64,10 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog-db',
-        'HOST': 'marszal.mysql.pythonanywhere-services.com',
-        'USER': 'marszal',
-        'PASSWORD': '01Uzumymw!',
+        'NAME': 'blog_db',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'LoLeK@18',
         'PORT': '3306',
     }
 }
@@ -112,3 +112,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'my_media'
